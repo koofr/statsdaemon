@@ -577,7 +577,13 @@ func main() {
 		defer f.Close()
 		defer pprof.WriteHeapProfile(f)
 	}
-	config.Parse(*config_file)
+	err := config.Parse(*config_file)
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Syntax error in configuration file %s\n", *config_file)
+		os.Exit(1)
+		return
+	}
+
 	runtime.GOMAXPROCS(*processes)
 	pcts := strings.Split(*percentile_thresholds, ",")
 	for _, pct := range pcts {
