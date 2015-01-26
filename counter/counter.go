@@ -1,7 +1,7 @@
 package counter
 
 import (
-	"github.com/vimeo/statsdaemon/common"
+	"github.com/koofr/statsdaemon/common"
 )
 
 // Add updates the counters map, adding the metric key if needed

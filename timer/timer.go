@@ -1,7 +1,7 @@
 package timer
 
 import (
-	"github.com/vimeo/statsdaemon/common"
+	"github.com/koofr/statsdaemon/common"
 )
 
 type Float64Slice []float64
