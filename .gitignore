@@ -1,3 +1,4 @@
 statsdaemon
 *.test
 */*.test
+statsdaemon-*.tar.gz
